@@ -1,1 +1,5 @@
-﻿*.meta
+﻿Tests.meta
+CHANGELOG.md.meta
+Editor.meta
+README.md.meta
+package.json.meta
