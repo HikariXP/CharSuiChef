@@ -10,46 +10,22 @@
  * Start our rest time.
  */
 
-using System.Linq;
 using UnityEditor;
-using UnityEngine;
 
 namespace CharSuiKitchen
 {
 	public class MainChef
 	{
-		// public List<BaseChef>
-		//
-		[MenuItem("Help/Take a Break...")]
+		[MenuItem("Help/Take a Build Break...")]
 		public static void StartBuildAsset()
 		{
-			//new AssetBuildChef().Cook(null);
-			Debug.Log($"{GetVersionNumber(string.Empty)}");
+			new AssetBuildChef().Cook(null);
 		}
-		
-		private static int GetVersionNumber(string versionStr)
+
+		[MenuItem("Help/Take a Import Break...")]
+		public static void StartImportAsset()
 		{
-			var recommendNumStr = string.Empty;
-			versionStr.Split('.')
-				.ToList()
-				.ForEach(cutStr =>
-				{
-					var s = int.Parse(cutStr).ToString("00").Trim();
-					recommendNumStr += s;
-				});
-			var recommendVersionNum = int.Parse(recommendNumStr);
-			return recommendVersionNum;
+			new AssetImportChef().Cook(null);
 		}
-		
-		// private static Dictionary<string, BaseChef> chefs = new Dictionary<string, BaseChef>()
-		// {
-		// 	{"AssetBuildChef", new AssetBuildChef()}
-		// };
-		//
-		// [MenuItem("Help/Take a Break...")]
-		// public static void StartBuildAsset()
-		// {
-		// 	chefs["AssetBuildChef"].Cook(null);
-		// }
 	}
 }

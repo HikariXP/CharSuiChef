@@ -4,12 +4,10 @@
  * Description: Magic Stick
  */
 
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using UnityEditor;
-using UnityEngine;
 
 #if UNITY_EDITOR
 
@@ -17,7 +15,7 @@ namespace CharSuiKitchen
 {
 	public static class Cooker
 	{
-		public static int milliseconds_ten_minutes = 600000;
+		public static string assetsFolderPath = "Assets/"；
 		
 		/// <summary>
 		/// Freeze the main thread

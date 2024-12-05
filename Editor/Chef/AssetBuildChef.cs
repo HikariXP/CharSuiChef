@@ -13,30 +13,10 @@ namespace CharSuiKitchen
 	public class AssetBuildChef : BaseChef
 	{
 		// 需要遍历的资源文件夹
-		private string folderPath = "Assets/AddressableLearn/";
+		private string folderPath = Cooker.assetsFolderPath;
 
 		// 15Min
-		private int forceEndTime = 900000;
-
-		#region Log & BarData
-
-		// 参考
-		// public static readonly string[] logs = new []
-		// {
-		// 	"Addressable content successfully built (duration : 0:12:04.241)",
-		// };
-		
-		// public static readonly BarData[] missions = new []
-		// {
-		// 	new BarData(){title = "Processing Addressable Group",context = "一堆addressable的组"},
-		// 	new BarData(){title = "Importing",context = "一堆Asset"},
-		// 	new BarData(){title = "Hold on...",context = "Compiling scripts.."},
-		// 	new BarData(){title = "Build Player Scripts",context = "只有进度条和一个Cancel"},
-		// 	new BarData(){title = "Calculate Scene Dependency Datas",context = "进度条和一个Cancel，context是一系列的资源"},
-		// 	new BarData(){title = "Generate Bundle Packing",context = "进度条和一个Cancel，context是一系列的资源"},
-		// };
-		
-		#endregion
+		private int forceEndTime = CountDownMilliseconds.milliseconds_fifteen_minutes;
 
 		public override void Cook(Action cookFinish)
 		{
@@ -56,7 +36,6 @@ namespace CharSuiKitchen
 				Cooker.ThreadFreeze(time);
 			}
 			
-			// Cooker.ThreadFreeze(Cooker.milliseconds_ten_minutes);
 			Cooker.ShowProgressBar("Hold on...","Compiling scripts..",0.3f);
 			Cooker.ThreadFreeze(50000); // 50s
 			
