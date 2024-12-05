@@ -1,0 +1,16 @@
+{
+  "name": "com.charsui.charsuichef",
+  "version": "0.0.1",
+  "displayName": "CharSui Chef",
+  "description": "This package provides a series of Editor simulation 'busy' functionalities.\n You can trigger these via \"Help/Take a break\", which will make Unity display some inconsequential fake import effects, giving you a short break time.",
+  "keywords": [
+    "charsui",
+    "chef"
+  ],
+  "author": {
+    "name": "CharSui",
+    "email": "charcharsui@gmail.com",
+    "url": "https://github.com/HikariXP"
+  },
+  "type": "tool"
+}
